@@ -1,0 +1,402 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'GeosansLight';
+    src: url('../fonts/GeosansLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'GeosansLight', sans-serif;
+    background: linear-gradient(to left, rgba(223, 221, 212, 0), rgba(223, 221, 212, 1) 50%), url('../images/bib.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #dfddd4;
+    color: #1c1714;
+}
+
+/* Top contact bar */
+.contact-bar {
+    background-color: #ceccbb;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.contact-bar a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.contact-bar a:hover {
+    color: #99896f;
+}
+
+/* Nav bar */
+.nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #99896f;
+        position: relative; /* Add this to keep the absolute-positioned nav-links contained */
+    }
+    
+
+.nav-links a {
+    text-decoration: none;
+    background-color: #99896f;
+    color: #ffffff;
+    padding: 10px 40px;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links a:hover {
+    color: #e1d1c7;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 4px;
+}
+
+/* Main content */
+.main-content {
+    padding-right: 200px;
+    background-color: rgba(195, 164, 26, 0);
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 15px;
+}
+
+.main-content h1 {
+    font-size: 40px;
+    color: #645031;
+    text-align: left;
+}
+
+.main-content p {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.offerte-button-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+
+/* Section */
+.section {
+    margin: 40px 0;
+}
+
+.section-voordelen {
+    padding: 4em 0;
+}
+
+.section-title {
+    font-size: 30px;
+    color: #645031;
+    margin-bottom: 15px;
+}
+
+.section-voordelen ul {
+    list-style: none;
+}
+
+.section-voordelen ul li {
+        content: '✓';
+        color: #000000;
+        padding-right: 10px;
+        font-size: 22px;
+    
+}
+
+.section-voordelen ul li::before {
+    content: '✓';
+    color: #645031;
+    padding-right: 10px;
+}
+
+/* Back to top button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #645031;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+#backToTop img {
+    width: 30px;
+}
+
+
+/* Pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 40px 10px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: le;
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: #645031;
+
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.popup-content input,
+.popup-content textarea {
+    padding: 10px;
+    border: 1px solid #645031;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.popup-content button {
+    padding: 10px;
+    background-color: #99896f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover{
+    background-color: #645031;
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 245px;
+    right: 595px;
+    cursor: pointer;
+    font-size: 40px;
+    color: #1c1714;
+}
+
+/* Main content */
+.main-content {
+    padding: 40px 10px;
+    padding-right: 250px;
+
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #645031;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.offerte-button-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.offerte-button {
+    padding: 15px 25px;
+    background-color: #99896f;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.offerte-button:hover {
+    background-color: #51462d;
+}
+
+/* Footer */
+footer {
+    background-color: #99896f;
+    color: #dfddd4;
+    text-align: center;
+    padding: 2em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Back to top button */
+#backToTop {
+    z-index: 10000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #645031;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #6e6c5e;
+}
+
+#backToTop img {
+    width: 15px;
+    height: 15px;
+}
+
+
+@media (max-width: 1280px){
+ 
+}
+
+
+
+@media (max-width: 834px){
+    .popup-content .close-btn {
+        top: 370px;
+        right: 280px;
+    }
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #99896f;
+        position: relative; /* Add this to keep the absolute-positioned nav-links contained */
+    }
+    
+
+    .nav-links a {
+        padding: 10px 40px;
+    }
+
+    .main-content {
+        padding: 70px 50px;
+    }
+
+    .main-content p {
+        font-size: 20px;
+    }
+
+  
+    .section-voordelen {
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+
+    .offerte-button-container {
+        text-align: center;
+        padding: 70px 0;
+    }
+
+
+    }
+    
+    @media (max-width: 430px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background-color: #ff9d00; /* Zorg ervoor dat de achtergrondkleur hetzelfde is als de nav-bar */
+        position: absolute;
+        top: 86px; /* Plaats nav-links onder de nav-bar */
+        left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links a {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0px;
+        font-size: 20px;
+        text-align: center;
+        border: 0.5px solid white;
+    }
+
+    .nav-links.active {
+        max-height: 100px; /* Arbitrary large height to show all links */
+    }
+
+    .popup-content .close-btn {
+        position: absolute;
+        top: 218px;
+        right: 80px;
+        cursor: pointer;
+        font-size: 40px;
+        color: #1c1714;
+    }
+
+
+
+}

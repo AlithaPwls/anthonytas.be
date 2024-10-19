@@ -1,0 +1,344 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'GeosansLight';
+    src: url('../fonts/GeosansLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%; /* Zorg ervoor dat de html en body minstens de volledige schermhoogte beslaan */
+    margin: 0;
+}
+
+body {
+    font-family: 'GeosansLight', sans-serif;
+    background-color: #dfddd4;
+    color: #1c1714;
+    display: flex;
+    flex-direction: column; /* Flexbox om elementen in een kolom te zetten */
+    min-height: 100vh; /* Zorgt ervoor dat de body minstens de volledige hoogte van het scherm beslaat */
+}
+
+
+/* Top contact bar */
+.contact-bar {
+    background-color: #ceccbb;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.contact-bar a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.contact-bar a:hover {
+    color: #99896f;
+}
+
+/* Logo and navigation bar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #99896f;
+    position: relative; /* Add this to keep the absolute-positioned nav-links contained */
+}
+
+
+.nav-links a:hover {
+    color: #e1d1c7;
+}
+
+
+.nav-links a {
+text-decoration: none;
+background-color: #99896f;
+color: #ffffff;
+padding: 10px 40px;
+font-size: 20px;
+}
+
+.logo img {
+height: 50px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #99896f;
+    color: #dfddd4;
+    text-align: center;
+    padding: 2em 0;
+    margin-top: auto; /* Zorgt ervoor dat de footer naar de onderkant gaat als er niet genoeg content is */
+}
+
+.contact-content {
+    font-size: 18px;
+    padding: 0;
+    padding-top: 50px;
+    max-width: 1200px;
+    margin: 0 0;
+    justify-content: left;
+}
+
+.contact-content h1 {
+    margin-left: 50px;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    font-weight: 900;
+    color: #645031;
+
+}
+
+/* Contact info layout */
+.contact-info {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: left; /* Push items apart */
+    align-items: left; /* Align items to the top */
+    align-content: left;
+    max-width: 1200px; /* Ensure enough space for both text and photo */
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-text {
+    flex: 3; /* This takes up most of the space for the text */
+    padding-right: 70px;
+    margin-right: 20px; /* Add space between text and photo */
+    margin-left: 50px;
+    font-size: larger;
+}
+
+.contact-photo {
+    flex: 1; /* This takes up the remaining space for the image */
+    width: 300px; /* Set a fixed width for the image */
+    border-radius: 5px;
+}
+
+.contact-photo img {
+    width: 150%;
+    border: 10px solid #99896f;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 4px;
+}
+
+@media (max-width: 1280){
+    .nav-bar {
+        background-color: #99896f;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 1.2em;
+    }
+    
+    .nav-bar img {
+        height: 70px;
+        margin-left: 50px;
+        margin-top: 7px;
+    }
+    
+    .nav-links a {
+        color: #ffffff;
+        margin: 0 40px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .nav-bar {
+        background-color: #99896f;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 1em;
+    }
+    
+    .nav-bar img {
+        height: 70px;
+        margin-left: 50px;
+        margin-top: 7px;
+    }
+    
+    .nav-links a {
+        color: #ffffff;
+        margin: 0 40px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+
+    .contact-text {
+        flex: 3; /* This takes up most of the space for the text */
+        padding-right: 3em;
+        padding-left: 3em;
+        margin-right: 0px; /* Add space between text and photo */
+        font-size: 22px;
+        
+    }
+}
+
+
+@media (max-width: 834px){
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px;
+        background-color: #99896f;
+        position: relative; /* Add this to keep the absolute-positioned nav-links contained */
+    }
+
+    .nav-bar img {
+        margin-left: 5px; /* Verwijder de linker marge bij 834px breedte */
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+
+
+    .contact-text {
+        flex: 3; /* This takes up most of the space for the text */
+        padding-right: 3em;
+        padding-left: 3em;
+        margin-right: 0px; /* Add space between text and photo */
+        font-size: larger;
+        
+    }
+    .contact-info {
+        display: flex; /* Use flexbox to align items side by side */
+        flex-direction: column;
+        align-items: left; /* Align items to the top */
+        align-content: left;
+        max-width: 800px; /* Ensure enough space for both text and photo */
+        margin-bottom: 200px;
+        line-height: 1.6;
+    }
+
+    .contact-content h1 {
+        padding-bottom: 40px;
+        font-weight: 900;
+        margin-left: 3.2em;
+    }
+
+    .contact-photo {
+        flex: 1; /* This takes up the remaining space for the image */
+        width: 300px; /* Set a fixed width for the image */
+        border-radius: 5px;
+        margin-top: 5em;
+        margin-left: 10em;
+    }
+    
+    .contact-photo img {
+        width: 150%;
+        border: 10px solid #99896f;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        background-color: #99896f;        
+        position: absolute;
+        top: 83px; /* Plaats nav-links onder de nav-bar */
+        left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links a {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0px;
+        font-size: 20px;
+        text-align: center;
+        border: 0.5px solid white;
+    }
+
+    .nav-links.active {
+        max-height: 100px; /* Arbitrary large height to show all links */
+    }
+
+    .nav-links a {
+        margin: 0 0px;
+    }
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #99896f;
+        position: relative; /* Add this to keep the absolute-positioned nav-links contained */
+    }
+    
+
+    .logo img {
+        height: 50px;
+
+    }
+
+
+    .contact-content {
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: center;
+ 
+    }
+
+    .contact-content h1 {
+        margin-left: 1.5em;
+        text-align: left;
+ 
+    }
+
+    .contact-info {
+        flex-direction: column; /* Zet de flex-direction op column om de items onder elkaar te plaatsen */
+        align-items: center; /* Zorgt ervoor dat de inhoud in het midden wordt uitgelijnd */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact-text {
+        font-size: 20px;
+        padding: 1px; /* Voegt padding toe, maar zonder rechter padding */
+        text-align: left; /* Centreer de tekst */
+        max-width: 100%; /* Zorg ervoor dat de tekst niet te breed is */
+    }
+
+    .contact-photo {
+        width: 50%;
+        margin-right: 280px;
+        margin-top: 50px; /* Ruimte boven de afbeelding */
+        padding-bottom: 2em;
+    }
+}

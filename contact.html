@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Contact - Syndicus</title>
+</head>
+<body>
+
+    <!-- Top contact bar -->
+    <div class="contact-bar">
+        <a href="mailto:tas.anthon@hotmail.com">tas.anthon@hotmail.com</a> |
+        <a href="tel:0478 46 45 09">0478 46 45 09</a>
+    </div>
+
+    <!-- Logo and Navigation -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="images/AT-white.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Plaatsbeschrijvingen</a>
+            <a href="tarieven.html">Tarieven</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Main content for Contact -->
+    <div class="contact-content">
+             <h1>Anthony Tas</h1>
+
+        <div class="contact-info">
+            <div class="contact-text">
+                <p>“Ik ben Anthony Tas, 26 jaar oud en woonachtig in Willebroek. Al vijf jaar ben ik actief als syndicus en vastgoedmakelaar, waar ik mijn kennis en expertise in vastgoedbeheer, verhuur en verkoop dagelijks in de praktijk breng. </p> <br>
+                <p>Ik heb een diploma in Bedrijfsmanagement – Rechtspraktijk behaald, met als afstudeerrichting Vastgoed, en heb tevens een postgraduaat in Vastgoed afgerond. Momenteel ben ik werkzaam als vastgoedmakelaar-stagiair, geregistreerd onder BIV-nummer 514.418. Mijn activiteiten zijn geconcentreerd in de regio Antwerpen, Mechelen en Sint-Niklaas.”</p>
+                <p><br> tas.anthon@hotmail.com | 0478 46 45 09</p>
+            </div>
+
+            <div class="contact-photo">
+                <img src="images/anthonytas.jpeg" alt="Persoon">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Vastgoedexpert. Alle rechten voorbehouden.
+    </footer>
+
+    <!-- JavaScript for scroll to top functionality -->
+    <script>    const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        
+        hamburger.onclick = function() {
+            // Toggle the 'active' class to slide in/out the nav links
+            if (navLinks.classList.contains("active")) {
+                navLinks.style.maxHeight = "0";  // Collapse
+                navLinks.classList.remove("active");
+            } else {
+                navLinks.style.maxHeight = navLinks.scrollHeight + "px";  // Expand based on content height
+                navLinks.classList.add("active");
+            }
+        };</script>
+
+</body>
+</html>

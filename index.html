@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Syndicus - Plaatsbeschrijvingen</title>
+</head>
+<body>
+
+    <!-- Pop-up form -->
+    <div id="popupForm" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">x</span>
+            <h2>Vraag een offerte aan</h2>
+            <form id="offerteForm">
+                <label for="naam">Naam:</label>
+                <input type="text" id="naam" name="naam" required><br><br>
+                <label for="vraag">Uw vraag:</label>
+                <textarea id="vraag" name="vraag" required></textarea><br><br>
+                <button type="submit">Verzend</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Top contact bar -->
+    <div class="contact-bar">
+        <a href="mailto:tas.anthon@hotmail.com">tas.anthon@hotmail.com</a> |
+        <a href="tel:0478 46 45 09">0478 46 45 09</a>
+    </div>
+
+    <!-- Logo and Navigation -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="images/AT-white.png" alt="Logo">
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#">Plaatsbeschrijvingen</a>
+            <a href="tarieven.html">Tarieven</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <!-- Hamburger menu icon -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Main content for Plaatsbeschrijvingen (home page) -->
+    <div class="main-content">
+        <h1>Plaatsbeschrijvingen</h1>
+        <p>Een plaatsbeschrijving is een <strong>gedetailleerd verslag</strong> van de staat van een pand bij het <strong>begin en einde van een huurcontract, verplicht</strong> volgens Belgisch recht (art. 1730 BW). Het dient om <strong>geschillen over schade</strong> tijdens de huurperiode te voorkomen en biedt bescherming aan zowel huurder als verhuurder.<br><br>
+        Bij intrede wordt de plaatsbeschrijving in <strong>aanwezigheid van beide partijen</strong> opgesteld en ondertekend, inclusief foto's van eventuele gebreken. Bij uittrede wordt dezelfde procedure gevolgd om veranderingen of <strong>schade vast te leggen</strong>. Indien er schade is bij uittrede, wordt een <strong>schatting</strong> gemaakt van de <strong>herstelkosten</strong>. Deze kosten kunnen verhaald worden op de huurder, vaak via de <strong>waarborg</strong>, of door <strong>aanvullende betaling</strong> als de waarborg niet volstaat.</p>        
+
+        <div class="offerte-button-container">
+            <a href="#" class="offerte-button">Vraag uw offerte aan</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Hoe verloopt een plaatsbeschrijving?</h2>
+            <p>Het proces van een plaatsbeschrijving verloopt in vier duidelijke stappen. In de eerste stap, de <strong>voorbereiding</strong>, nemen we contact op met zowel de huurder als de verhuurder om een afspraak te plannen op een geschikt moment. We raden aan dat de woning zo schoon en opgeruimd mogelijk is, zodat de inspectie vlot kan verlopen.<br><br>
+            Tijdens de <strong>inspectie ter plaatse</strong> loopt onze expert de volledige woning door. Hierbij wordt de toestand van de muren, vloeren, ramen, deuren en andere belangrijke elementen nauwkeurig genoteerd. Eventuele schade of gebreken worden vastgelegd, zowel in tekst als op foto’s, om een volledig en accuraat beeld te schetsen van de staat van de woning.<br><br>
+            In de derde stap, het <strong>opstellen van het rapport</strong>, verwerken we binnen enkele dagen de gegevens van de inspectie in een gedetailleerd rapport. Dit rapport bevat per ruimte een beschrijving van de staat, ondersteund met foto’s waar nodig. Tot slot vindt de <strong>ondertekening en archivering</strong> van het rapport plaats. Beide partijen tekenen het document, waarmee het een officieel bewijsstuk wordt van de staat van de woning bij intrede. Dit is essentieel om bij het einde van de huurperiode conflicten te voorkomen en de woning op een transparante manier te vergelijken met de toestand bij het begin van de huur.</p>        
+        </div>
+
+        <div class="section-voordelen">
+            <h2 class="section-title">Voordelen van een gedetailleerde plaatsbeschrijving</h2>
+            <ul>
+                <li>Bescherming van zowel huurder als verhuurder.</li>
+                <li>Voorkomen van geschillen over schade.</li>
+                <li>Duidelijke afspraken over reparaties en onderhoud.</li>
+                <li>Officiële documentatie die rechtsgeldig is.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="backToTop"><img src="images/arrowup.png" alt="terug naar boven"></button>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Vastgoedexpert. Alle rechten voorbehouden.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Show back to top button when scrolled down
+        window.onscroll = function() {
+            const backToTopBtn = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll back to top when button clicked
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        // Handle pop-up functionality
+        const popup = document.getElementById("popupForm");
+        const closeBtn = document.querySelector(".close-btn");
+        const offerteButton = document.querySelector(".offerte-button");
+        const offerteForm = document.getElementById("offerteForm");
+
+        // Show the pop-up when 'Vraag uw offerte aan' is clicked
+        offerteButton.onclick = function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            popup.style.display = "flex";
+        };
+
+        // Close the pop-up when the close button is clicked
+        closeBtn.onclick = function() {
+            popup.style.display = "none";
+        };
+
+        // Close the pop-up when clicking outside of the content
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        };
+
+        // Handle form submission
+        offerteForm.onsubmit = function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Collect form data
+            const naam = document.getElementById("naam").value;
+            const vraag = document.getElementById("vraag").value;
+
+            // Send the email (using 'mailto' for simplicity)
+            window.location.href = `mailto:tas.anthon@hotmail.com?subject=Offerte aanvraag&body=Naam: ${naam}%0D%0AVraag: ${vraag}`;
+
+            // Close the pop-up after sending
+            popup.style.display = "none";
+
+            // Optionally, reset the form
+            offerteForm.reset();
+        };
+
+        // Hamburger menu toggle
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+
+hamburger.onclick = function() {
+    // Toggle the 'active' class to slide in/out the nav links
+    if (navLinks.classList.contains("active")) {
+        navLinks.style.maxHeight = "0";  // Collapse
+        navLinks.classList.remove("active");
+    } else {
+        navLinks.style.maxHeight = navLinks.scrollHeight + "px";  // Expand based on content height
+        navLinks.classList.add("active");
+    }
+};
+    </script>
+
+</body>
+</html>

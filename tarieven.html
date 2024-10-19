@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/tarieven.css">
+    <title>Tarieven - Syndicus</title>
+</head>
+<body>
+
+    <!-- Top contact bar -->
+    <div class="contact-bar">
+        <a href="mailto:tas.anthon@hotmail.com">tas.anthon@hotmail.com</a> |
+        <a href="tel:0478 46 45 09">0478 46 45 09</a>
+    </div>
+
+    <!-- Logo and Navigation -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="images/AT-white.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Plaatsbeschrijvingen</a>
+            <a href="tarieven.html">Tarieven</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+                <!-- Hamburger menu icon -->
+                <div class="hamburger" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+    </div>
+
+    <!-- Main content for Tarieven -->
+    <div class="main-content">
+        <div class="text">
+            <h1>Tarieven</h1>
+            <p>Onze tarieven zijn zorgvuldig samengesteld om u de beste prijs-kwaliteitverhouding te bieden voor plaatsbeschrijvingen van verschillende panden. We begrijpen dat elk pand uniek is en hebben daarom verschillende prijscategorieën ontwikkeld om aan uw behoeften te voldoen.</p>
+            <p>Hieronder vindt u een overzicht van de tarieven per type pand. Deze tarieven zijn indicatief en kunnen variëren afhankelijk van de specifieke situatie van uw pand. Neem gerust contact met ons op voor een offerte op maat.</p>
+        </div>
+        <!-- Tarieven tabel -->
+        <table class="tarieven-tabel">
+            <thead>
+                <tr>
+                    <th>Type Pand</th>
+                    <th>Prijs (per partij)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Appartement (tot 3 sk.)</td>
+                    <td>€125*</td>
+                </tr>
+                <tr>
+                    <td>Woning (tot 3 sk.)</td>
+                    <td>€200*</td>
+                </tr>
+                <tr>
+                    <td>Woning (vanaf 4 sk.)</td>
+                    <td>€250*</td>
+                </tr>
+                <tr>
+                    <td>Kantoorruimte</td>
+                    <td>Prijs op aanvraag</td>
+                </tr>
+           
+                <tr>
+                    <td>Commercieel pand</td>
+                    <td>Prijs op aanvraag</td>
+                </tr>
+                <tr>
+                    <td>Industriële ruimte</td>
+                    <td>Prijs op aanvraag</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="partij">*Inventarisatie roerende goederen bedraagt €25 per partij</p>        
+        <p class="btw">*Exclusief BTW (21%).</p>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Vastgoedexpert. Alle rechten voorbehouden.
+    </footer>
+
+    <script>    const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        
+        hamburger.onclick = function() {
+            // Toggle the 'active' class to slide in/out the nav links
+            if (navLinks.classList.contains("active")) {
+                navLinks.style.maxHeight = "0";  // Collapse
+                navLinks.classList.remove("active");
+            } else {
+                navLinks.style.maxHeight = navLinks.scrollHeight + "px";  // Expand based on content height
+                navLinks.classList.add("active");
+            }
+        };</script>
+
+</body>
+</html>
